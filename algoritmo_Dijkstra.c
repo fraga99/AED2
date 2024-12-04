@@ -21,7 +21,7 @@ int main()  {
 
 
 
-int distancia_minima(int vert, int distancia[], bool CMN[]) {
+int distancia_minima(int vert, int distancia[], bool CMN[]) { //CMN = conjunto de menor caminho (que inicia em 0, ou seja, ainda sem o menor caminho)
     int min = INT_MAX, minIndex;
 
     for (int v = 0; v < vert; v++)
@@ -34,16 +34,12 @@ int distancia_minima(int vert, int distancia[], bool CMN[]) {
 
 
 void algoritmo_dijkstra(int grafico[vert][vert], int ini) {
+    int distancia[vert]; // guarda a menor distancia do ini
+    int CMN[vert]; // V se o vertice i estiver no menor caminho ja encontrado
+    
+    
 
-    printf ("Digite o numero de vertices (no maximo 20): ");
-        scanf("%d", &vert);
-
-    if (vert < 0 || vert > 20)  {
-        printf("Erro, digite o numero de vertices validos: (de 0 a 20): ");
-        scanf("%d", &vert);
-    }
-
-    int grafico[vert][vert];
+    
 }
 
 
