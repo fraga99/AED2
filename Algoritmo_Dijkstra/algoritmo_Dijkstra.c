@@ -53,6 +53,10 @@ void algoritmo_dijkstra(int grafo[MAX_VERTICES][MAX_VERTICES], int vert, int sou
 
         visitado[u] = true;
 
+        /*percorre todos os vértices adjacentes ao vértice u (o vértice de menor distância atual). Ele:
+        Verifica se cada vértice adjacente pode ser alcançado a partir de u e se é possível melhorar a distância mínima para esse vértice.
+        Atualiza a menor distância conhecida e o caminho para os vértices adjacentes, se necessário.
+        Esse processo é o relaxamento das arestas, que é o mecanismo principal para encontrar os menores caminhos no algoritmo de Dijkstra.*/
         for (int v = 0; v < vert; v++) {
             if (!visitado[v] && grafo[u][v] > 0 && distancia[u] != INT_MAX &&
                 distancia[u] + grafo[u][v] < distancia[v]) {

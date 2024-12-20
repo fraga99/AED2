@@ -12,8 +12,7 @@ typedef struct {
     Aresta* listaArestas;
 } Grafo;
 
-// união busca (Union-Find)
-
+// união-busca (Union-Find)
 typedef struct {
     int pai;    //representante do conjunto;
     int rank;   // auxiliar na união
